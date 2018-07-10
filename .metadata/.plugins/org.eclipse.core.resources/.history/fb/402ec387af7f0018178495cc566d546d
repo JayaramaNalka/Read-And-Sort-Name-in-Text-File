@@ -1,0 +1,29 @@
+package OT.TextReadSort.Sort;
+
+public class Employee implements Comparable<Employee>{
+	String Name;
+	 String Email;
+	String Place;
+	
+	public Employee(String Name, String Email,String Place) {
+        this.Name = Name;
+        this.Email = Email;
+        this.Place = Place;
+    }
+	
+	@Override
+    public String toString() {
+        return "Employee{" + "Name=" + Name + ", Email=" + Email  + ", Place=" + Place  +'}';
+    }
+	
+	
+	@Override
+	public int compareTo(Employee o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+
+}

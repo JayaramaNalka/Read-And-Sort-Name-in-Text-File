@@ -1,0 +1,19 @@
+package ot.employeeApp.sortAndMap;
+
+import java.util.Stack;
+import java.util.Vector;
+
+public class Eg{
+	
+public static void main(String[] args) {
+	Stack<Integer> es=new Stack<>();
+	es.push(10);
+	es.push(43);
+	es.push(23);
+	es.push(43);
+	System.out.println(es.search(23));
+
+	
+	
+}
+}

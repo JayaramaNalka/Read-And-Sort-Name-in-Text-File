@@ -1,0 +1,19 @@
+
+
+
+import java.util.Comparator;
+
+import OT.TextReadSort.Sort.Employee;
+ 
+// sort by name
+public class EmployeeSortByName implements Comparator  {
+    public int compare(Employee emp1, Employee emp2) {
+        return emp1.Name.compareTo(emp2.Name);
+    }
+
+	@Override
+	public int compare(Object arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

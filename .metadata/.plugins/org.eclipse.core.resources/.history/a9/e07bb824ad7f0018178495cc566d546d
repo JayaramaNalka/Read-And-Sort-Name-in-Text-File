@@ -1,0 +1,13 @@
+package OT.TextReadSort.Sort;
+
+public class Employee implements Comparable{
+	String Name;
+	String Email;
+	String Place;
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

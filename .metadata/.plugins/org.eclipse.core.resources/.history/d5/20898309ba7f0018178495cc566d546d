@@ -1,0 +1,75 @@
+package OT.TextReadSort.Sort;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+
+public class SearchandSort {
+public static void main(String[] args) throws Exception {
+	
+	java.io.File inputFile = new java.io.File("src/input.txt");
+	FileReader fileReader = new FileReader(inputFile);
+	BufferedReader bufferedReader = new BufferedReader(fileReader);
+	String inputLine;
+	List<String> lineList = new ArrayList<String>();
+
+	List<Employee> employeeList = new ArrayList<Employee>();
+	while ((inputLine = bufferedReader.readLine()) != null) {
+		lineList.add(inputLine);
+		System.out.println(inputLine);
+		Employee employee=new Employee();
+		String[] parts = inputLine.split(",");
+		employee.Name=parts[0];
+		employee.Email=parts[1];
+		employee.Place=parts[2];
+		
+		employeeList.add(employee); 
+//		System.out.println(employee.Name);
+//		System.out.println(employee.Email);
+//		System.out.println(employee.Place);
+		
+	}
+	
+//	 for(Employee model : employeeList) {
+//         System.out.println(model.Name);
+//         System.out.println(model.Email);
+//         System.out.println(model.Place);
+//        
+//       
+//     }
+	 
+	 Collections.sort(employeeList,new Employee().new ComparatorName());
+     System.out.println("\nlist after sorting on basis of name(ascending order), "
+               + "using inner class : \n"+ employeeList);
+     
+     System.out.println("Enter the name you want the details");
+     Scanner sc = new Scanner(System.in);
+    String s=sc.next();
+//     
+//     int searchListLength = employeeList.size();
+//     for (int i = 0; i < searchListLength; i++) {
+//     if (((Employee) employeeList).getName().contains(s)) {
+//    	 System.out.println(((Employee) employeeList).getName());
+//    	 System.out.println(((Employee) employeeList).getEmail());
+//    	 System.out.println(((Employee) employeeList).getPlace());
+//     //Do whatever you want here
+//     }
+//     }
+    
+    Employee jim = new Employee(s);
+    System.out.println(jim);
+    int index = Collections.binarySearch(employeeList, jim);
+    if (index >= 0) {
+        jim = employeeList.get(index-1);
+        System.out.println("Found employee: " + jim);
+    }
+     
+	
+}
+}

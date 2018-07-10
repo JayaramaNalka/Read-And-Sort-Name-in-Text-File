@@ -1,0 +1,8 @@
+package OT.TextReadSort.Sort;
+
+public class Employee {
+	String Name;
+	String Email;
+	String Place;
+
+}

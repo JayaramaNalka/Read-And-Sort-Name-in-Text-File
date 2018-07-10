@@ -1,0 +1,50 @@
+package OT.TextReadSort.Sort;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Sort {
+
+	public static void main(String[] args) throws Exception {
+
+//		String inputFile =("src/File/input.txt") ;
+System.out.println(System.getProperty("user.dir"));
+		
+		java.io.File inputFile = new java.io.File("src/input.txt");      
+		System.out.println(inputFile);
+		String outputFile = "src/output.txt";
+
+		FileReader fileReader = new FileReader(inputFile);
+		System.out.println(fileReader);
+		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		System.out.println(bufferedReader);
+		String inputLine;
+		List<String> lineList = new ArrayList<String>();
+		while ((inputLine = bufferedReader.readLine()) != null) {
+			lineList.add(inputLine);
+		}
+		fileReader.close();
+		System.out.println(lineList);
+		Collections.sort(lineList);
+		System.out.println(outputFile);
+		FileWriter fileWriter = new FileWriter(outputFile);
+		PrintWriter out = new PrintWriter(fileWriter);
+		for (String outputLine : lineList) {
+			out.println(outputLine);
+		}
+		out.flush();
+		out.close();
+		fileWriter.close();
+		System.out.println(out);
+		System.out.println(outputLine);
+		
+		
+
+	}
+}

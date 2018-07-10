@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="&#x0D;&#x0A;IEnumerable&lt;string&gt; selectLines = inputLine.Where(employee.Name =&gt; inputLine.EndsWith(&quot;,&quot;));&#x0D;&#x0A;&#x0D;&#x0A;foreach (var item in selectLines)&#x0D;&#x0A;{&#x0D;&#x0A;    Console.WriteLine(item);&#x0D;&#x0A;}" key="selection"/>
+		<list key="findhistory">
+			<item value="&#x0D;&#x0A;IEnumerable&lt;string&gt; selectLines = inputLine.Where(employee.Name =&gt; inputLine.EndsWith(&quot;,&quot;));&#x0D;&#x0A;&#x0D;&#x0A;foreach (var item in selectLines)&#x0D;&#x0A;{&#x0D;&#x0A;    Console.WriteLine(item);&#x0D;&#x0A;}"/>
+		</list>
+	</section>
+</section>

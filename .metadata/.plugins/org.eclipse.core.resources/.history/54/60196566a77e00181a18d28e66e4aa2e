@@ -1,0 +1,42 @@
+package OT.FirstProject.Demo;
+
+import java.util.Scanner;
+
+public class MultiplicationSwitch {
+public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enter your input 1");
+	int x=sc.nextInt();
+	System.out.println("Enter your input 2");
+	int y=sc.nextInt();
+	
+	
+	System.out.println("Enter the operation required 1.Add 2.Minus 3.Multi 4.Div");
+	int  sel=sc.nextInt();
+	 System.out.println("Result: ");
+	switch (sel)
+	{
+    case 1: {
+    	int z=x+y;
+    	 System.out.println(z);
+        break;
+    }
+    case 2: {
+    	int z=x-y;
+    	 System.out.println(z);
+        break;
+    }
+    case 3: {
+    	int z=x*y;
+    	 System.out.println(z);
+        break;
+    }
+    case 4: {
+    	int z=x/y;
+    	 System.out.println(z);
+        break;
+    }
+   
+}
+}
+}

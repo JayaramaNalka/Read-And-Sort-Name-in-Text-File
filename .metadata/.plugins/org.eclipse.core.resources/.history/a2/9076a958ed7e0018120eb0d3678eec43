@@ -1,0 +1,46 @@
+package OT.FirstProject.Demo;
+
+import java.util.Scanner;
+
+public class MultiPlication {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter your input 1");
+		int x=sc.nextInt();
+		System.out.println("Enter your input 2");
+		int y=sc.nextInt();
+		
+		
+		System.out.println("Enter the operation required 1.Add 2.Minus 3.Multi 4.Div");
+		int  sel=sc.nextInt();
+		if(sel==1)
+		{
+			int z=x+y;
+			System.out.println("Result "+z);
+		}
+		else if(sel==2)
+		{
+			int z=x-y;
+			System.out.println("Result "+z);
+		}
+		else if(sel==3)
+		{
+			int z=x*y;
+			System.out.println("Result "+z);
+		}
+		
+		else if(sel==4)
+		{
+			int z=x/y;
+			System.out.println("Result "+z);
+		}
+		
+		else
+		{
+			System.out.println("Invalid Input");
+		}
+		
+		
+	}
+
+}
